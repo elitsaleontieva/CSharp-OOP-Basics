@@ -35,7 +35,7 @@ using System.Linq;
                         {
                             BankAccount bankAccount = new BankAccount(accountId);
                             dictionary[accountId] = bankAccount;
-                        dictionary[accountId].Id = accountId;
+                            dictionary[accountId].Id = accountId;
                         }
                     
                     break;
