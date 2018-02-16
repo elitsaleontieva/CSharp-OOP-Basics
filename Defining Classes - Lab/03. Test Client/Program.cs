@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -35,7 +35,7 @@ using System.Linq;
                         {
                             BankAccount bankAccount = new BankAccount(accountId);
                             dictionary[accountId] = bankAccount;
-                            dictionary[accountId].Id = accountId;
+                        dictionary[accountId].Id = accountId;
                         }
                     
                     break;
@@ -47,8 +47,7 @@ using System.Linq;
                     }
                     else
                     {
-                        dictionary[accountId].Balance += amount;
-
+                        dictionary[accountId].Deposit(amount);
                     }
                     break;
 
@@ -65,10 +64,10 @@ using System.Linq;
                     
                     else if(dictionary.ContainsKey(accountId) && dictionary[accountId].Id==accountId)
                     {
-                     
-                        dictionary[accountId].Balance -= amount;
-                    }
 
+                        dictionary[accountId].Withdraw(amount);
+                    }
+                 
                     break;
 
                 case "Print":
@@ -80,7 +79,6 @@ using System.Linq;
                     else
                     {
                         Console.WriteLine($"{dictionary[accountId].ToString()}");
-
                     }
 
                     break;
