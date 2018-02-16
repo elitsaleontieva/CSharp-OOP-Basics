@@ -35,10 +35,7 @@ using System.Linq;
                         {
                             BankAccount bankAccount = new BankAccount(accountId);
                             dictionary[accountId] = bankAccount;
-                        dictionary[accountId].Id = accountId;
-
-                           // Console.WriteLine(bankAccount.Id);
-                           // Console.WriteLine(bankAccount.Balance);
+                            dictionary[accountId].Id = accountId;
                         }
                     
                     break;
@@ -51,7 +48,6 @@ using System.Linq;
                     else
                     {
                         dictionary[accountId].Balance += amount;
-                        // Console.WriteLine($"{dictionary[accountId].Id} {dictionary[accountId].Balance}");
 
                     }
                     break;
@@ -72,7 +68,6 @@ using System.Linq;
                      
                         dictionary[accountId].Balance -= amount;
                     }
-                  //  Console.WriteLine($"{dictionary[accountId].Id} {dictionary[accountId].Balance}");
 
                     break;
 
