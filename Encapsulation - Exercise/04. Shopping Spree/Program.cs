@@ -1,3 +1,5 @@
+    namespace AnimalFarm
+{
     using System;
     using System.Linq;
     using System.Collections.Generic;
@@ -45,9 +47,9 @@
                     var name = parts[0];
                     var cost = decimal.Parse(parts[1]);
 
-                    Product product3 = new Product(name, cost);
+                    Product product = new Product(name, cost);
                     
-                    listOfProduct.Add(product3);
+                    listOfProduct.Add(product);
 
                 }
                 
@@ -93,16 +95,18 @@
 
                     if (person.Bag.Count > 0)
                     {
-                        foreach (var item1 in person.Bag)
+                        foreach (var product in person.Bag)
                         {
-                            result += $"{item1.Name}, ";
+                            result += $"{product.Name}, ";
                             
                         }
-                        Console.WriteLine(result.TrimStart().TrimEnd().TrimEnd(','));
+                        result = result.TrimStart().TrimEnd().TrimEnd(',');
+                        Console.WriteLine(result);
                     }
                     else
                     {
-                        Console.WriteLine($"{result.TrimStart().TrimEnd().TrimEnd(',')} Nothing bought");
+                        result = result.TrimStart().TrimEnd().TrimEnd(',');
+                        Console.WriteLine($"{result} Nothing bought");
                     }
                 }
             }
@@ -115,10 +119,7 @@
 
         }
     }
-
-
-
-
+}
 
 
 
