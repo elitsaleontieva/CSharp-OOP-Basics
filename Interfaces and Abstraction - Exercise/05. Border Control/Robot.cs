@@ -21,16 +21,6 @@ namespace BorderControl
             this.Id = id;
         }
 
-        //public bool CheckId(string id, string fakeDigits)
-        //{
-        //    if (string.Join("", id.ToString().TakeLast(fakeDigits.Length)) == fakeDigits)
-        //    {
-        //        return false;
-        //    }
-        //    else
-        //    {
-        //        return true;
-        //    }
-        //}
+        
     }
 }
